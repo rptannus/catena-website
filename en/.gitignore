@@ -1,0 +1,23 @@
+# Arquivos do sistema
+.DS_Store
+
+# Diretórios e arquivos Ruby/Rails
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/.keep
+
+# Bundler e Rails
+/vendor/bundle
+.byebug_history
+
+# Arquivos do editor
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Arquivos de ambiente
+.env
+.env.*

@@ -1,0 +1,72 @@
+/* Adicionar estes estilos ao blog.css */
+
+/* Post individual */
+.blog-post {
+    padding: 4rem 0;
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.company-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.company-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-info li {
+    margin-bottom: 0.5rem;
+}
+
+.testimonial {
+    background: #f0f8ff;
+    border-left: 4px solid #007bff;
+    padding: 2rem;
+    margin: 2rem 0;
+    font-style: italic;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    text-align: right;
+}
+
+.cta-bottom {
+    background: #007bff;
+    color: white;
+    padding: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+    border-radius: 8px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #007bff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background: #f8f9fa;
+}

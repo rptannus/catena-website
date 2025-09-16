@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Blog | Catena - Cases e Insights sobre Recrutamento</title>
+  <meta name="description" content="Cases de sucesso e insights sobre recrutamento. Mais de 625 vagas fechadas para 250+ empresas.">
+  
+  <link rel="canonical" href="https://catena.work/blog/">
+  
+  <!-- CSS do site principal -->
+  <link rel="stylesheet" href="../assets/css/plugins.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/colors/aqua.css">
+  <link rel="preload" href="../assets/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet';">
+  
+  <style>
+    /* Mantém o estilo dark do site principal */
+    .blog-hero {
+      background: #1a1a1a;
+      color: white;
+      padding: 80px 0 120px;
+      position: relative;
+    }
+    
+    .blog-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: white;
+      transform: skewY(-2deg);
+      transform-origin: 0;
+    }
+    
+    .blog-stats {
+      display: flex;
+      gap: 4rem;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    
+    .stat-box {
+      text-align: center;
+    }
+    
+    .stat-box h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .blog-content {
+      background: #f8f9fa;
+      padding: 80px 0;
+    }
+    
+    .category-pills {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+    
+    .category-pill {
+      padding: 0.5rem 1.5rem;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      color: #333;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .category-pill:hover,
+    .category-pill.active {
+      background: #333;
+      color: white;
+      border-color: #333;
+    }
+    
+    .blog-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+    
+    .blog-card-category {
+      color: #666;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    
+    .blog-card h3 {
+      font-size: 1.4rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+    
+    .blog-card h3 a {
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .blog-card h3 a:hover {
+      color: #000;
+    }
+    
+    .btn-yellow {
+      background: #ffd700;
+      color: #333;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+    
+    .btn-yellow:hover {
+      background: #ffed4a;
+      color: #333;
+      transform: translateY(-2px);
+    }
+    
+    .cta-section {
+      background: #333;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+      margin-top: 80px;
+    }
+    
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section .btn-yellow {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body style="background: #1a1a1a;">
+  <!-- Header igual ao site -->
+  <header style="background: #1a1a1a; padding: 20px 0;">
+    <div class="container">
+      <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="../" style="text-decoration: none; color: white; font-size: 1.5rem; font-weight: bold;">
+          <img src="../assets/img/logo.png" alt="Catena" style="height: 40px;">
+        </a>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+          <a href="../#diferenciais" style="color: white; text-decoration: none;">Diferenciais</a>
+          <a href="../#como-funciona" style="color: white; text-decoration: none;">Como Funciona</a>
+          <a href="../#depoimentos" style="color: white; text-decoration: none;">Depoimentos</a>
+          <a href="/blog/" style="color: white; text-decoration: none; font-weight: bold;">Blog</a>
+          <a href="../en/"><img src="../assets/img/icons/united-states.png" style="width: 25px;" alt="English"></a>
+          <a href="../#simulacao" class="btn-yellow">QUERO CANDIDATOS</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="text-center">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Blog Catena</h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">Cases de sucesso, insights e guias sobre recrutamento</p>
+        
+        <div class="blog-stats">
+          <div class="stat-box">
+            <h3>625+</h3>
+            <p>Vagas Fechadas</p>
+          </div>
+          <div class="stat-box">
+            <h3>250+</h3>
+            <p>Empresas</p>
+          </div>
+          <div class="stat-box">
+            <h3>15</h3>
+            <p>Dias em Média</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo -->
+  <section class="blog-content">
+    <div class="container">
+      <!-- Categorias -->
+      <div class="category-pills">
+        <a href="#" class="category-pill active">Todos</a>
+        <a href="#" class="category-pill">Cases de Sucesso</a>
+        <a href="#" class="category-pill">Tecnologia</a>
+        <a href="#" class="category-pill">Vendas</a>
+        <a href="#" class="category-pill">Marketing</a>
+        <a href="#" class="category-pill">Guias</a>
+      </div>
+
+      <!-- Grid de Posts -->
+      <div class="row g-4">
+        <!-- Case 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card">
+            <div class="blog-card-category">CASE DE SUCESSO • TECNOLOGIA</div>
+            <h3><a href="cases/bionexo.html">Como a Bionexo encontrou talentos de tecnologia com a Catena</a></h3>
+            <p>Empresa multinacional de saúde conseguiu contratar vários candidatos qualificados para suas equipes de tecnologia.</p>
+            <a href="cases/bionexo.html" class="btn-yellow">Ler mais →</a>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card">
+            <div class="blog-card-category">CASE DE SUCESSO • VENDAS</div>
+            <h3><a href="cases/tns-nano.html">De 8 meses para 1: TNS Nano encontra diretor de vendas</a></h3>
+            <p>Após 8 meses sem sucesso, a TNS Nano preencheu a vaga de Diretor Comercial em apenas 30 dias.</p>
+            <a href="cases/tns-nano.html" class="btn-yellow">Ler mais →</a>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="blog-card">
+            <div class="blog-card-category">CASE DE SUCESSO • MARKETING</div>
+            <h3><a href="cases/winnin.html">Winnin melhora qualificação de candidatos</a></h3>
+            <p>Como uma empresa de IA otimizou seu processo para encontrar Key Account Managers qualificados.</p>
+            <a href="cases/winnin.html" class="btn-yellow">Ler mais →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Precisa contratar? Nós podemos ajudar</h2>
+      <p style="font-size: 1.2rem; opacity: 0.9;">Candidatos qualificados em até 72 horas</p>
+      <a href="../#simulacao" class="btn-yellow">FAZER SIMULAÇÃO</a>
+    </div>
+  </section>
+
+  <!-- Footer simples -->
+  <footer style="background: #111; color: white; padding: 40px 0; text-align: center;">
+    <div class="container">
+      <p>© 2025 catena.work | Todos os direitos reservados</p>
+      <div style="margin-top: 1rem;">
+        <a href="https://www.linkedin.com/company/catenawork/" style="color: white; margin: 0 10px;">LinkedIn</a>
+        <a href="https://www.instagram.com/catena.work/" style="color: white; margin: 0 10px;">Instagram</a>
+        <a href="mailto:meajuda@catena.work" style="color: white; margin: 0 10px;">meajuda@catena.work</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <script src="../assets/js/theme.js"></script>
+</body>
+</html>

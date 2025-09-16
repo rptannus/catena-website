@@ -1,0 +1,46 @@
+# Configuração principal
+User-agent: *
+
+# Bloqueia diretórios sensíveis
+Disallow: /.git/
+Disallow: /tmp/
+Disallow: /ssl/
+Disallow: /logs/
+Disallow: /catena_app/
+
+# Bloqueia partes irrelevantes do WordPress
+Disallow: /conteudo/feed/
+Disallow: /conteudo/comments/
+Disallow: /conteudo/category/
+Disallow: /conteudo/author/
+Disallow: /conteudo/wp-admin/
+Disallow: /conteudo/wp-includes/
+Disallow: /conteudo/wp-json/
+Disallow: /conteudo/xmlrpc.php
+
+# IMPORTANTE: Bloqueia parâmetros de rastreamento
+Disallow: /*?trk=
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /?trk=
+Disallow: /*&trk=
+
+# Permite versão em inglês
+Allow: /en/
+
+# Bloqueia index.html (usar apenas /)
+Disallow: /index.html
+
+# Bloqueia /conteudo sem barra final
+Disallow: /conteudo$
+
+# Permite indexar páginas importantes
+Allow: /conteudo/
+Allow: /$
+
+# Define crawl delay para não sobrecarregar
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://catena.work/sitemap.xml
+Sitemap: https://catena.work/conteudo/sitemap.xml

@@ -1,0 +1,68 @@
+RewriteEngine On
+
+# Redireciona para HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redireciona www para não-www
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://catena.work%{REQUEST_URI} [L,R=301]
+
+# NOVO: Remove index.html da URL
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+index\.html[\s?] [NC]
+RewriteRule ^(.*)index\.html$ https://catena.work/$1 [R=301,L]
+
+# NOVO: Remove parâmetros de rastreamento (?trk=)
+RewriteCond %{QUERY_STRING} ^trk=.*$ [NC,OR]
+RewriteCond %{QUERY_STRING} &trk=.*$ [NC]
+RewriteRule ^(.*)$ /$1? [R=301,L]
+
+# NOVO: Remove outros parâmetros de rastreamento
+RewriteCond %{QUERY_STRING} ^(utm_|fbclid=|gclid=).*$ [NC]
+RewriteRule ^(.*)$ /$1? [R=301,L]
+
+# NOVO: Redireciona /conteudo sem barra para /conteudo/ com barra
+RewriteRule ^conteudo$ /conteudo/ [R=301,L]
+
+# NOVO: Redireciona /en sem barra para /en/ com barra
+RewriteRule ^en$ /en/ [R=301,L]
+
+# HSTS: força os navegadores a usarem HTTPS
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+</IfModule>
+
+# Impede que diretórios sem index.html exibam o conteúdo da pasta
+Options -Indexes
+
+# Bloqueia acesso a arquivos sensíveis
+<FilesMatch "^(\.git|\.env|composer\.(json|lock)|package\.json)$">
+  Require all denied
+</FilesMatch>
+
+# Proteções adicionais de segurança
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# Cache para performance
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# Compressão GZIP (adicional para performance)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
