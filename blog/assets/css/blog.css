@@ -1,72 +1,236 @@
-/* Adicionar estes estilos ao blog.css */
+/* ==========================================================================
+   CSS Específico do Blog Catena
+   ========================================================================== */
 
-/* Post individual */
+/* Cores da Catena */
+.text-catena-yellow {
+  color: #ffd700 !important;
+}
+
+.bg-catena-yellow {
+  background-color: #ffd700 !important;
+}
+
+.btn-catena-yellow {
+  background-color: #ffd700 !important;
+  border-color: #ffd700 !important;
+  color: #333 !important;
+}
+
+.btn-catena-yellow:hover {
+  background-color: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+  color: #333 !important;
+}
+
+/* Blog Home - Stats */
+.blog-stats {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+/* Blog Home - Categorias */
+.category-pills {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.category-pill {
+  padding: 0.5rem 1.5rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.category-pill:hover,
+.category-pill.active {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+/* Blog Home - Cards */
+.blog-card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.blog-card-category {
+  color: #666;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.blog-card h3 a:hover {
+  color: #000;
+}
+
+/* Post Individual - Conteúdo */
 .blog-post {
-    padding: 4rem 0;
+  padding: 0;
 }
 
-.post-content {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
+.article-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-.post-content p {
-    margin-bottom: 1.5rem;
+.article-content p {
+  margin-bottom: 1.5rem;
 }
 
+.article-content .lead {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #6c757d;
+}
+
+/* Post Individual - Info da Empresa (já usamos card do tema) */
 .company-info {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 8px;
-    margin: 2rem 0;
+  /* Removido - usando classes do tema */
 }
 
-.company-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.company-info li {
-    margin-bottom: 0.5rem;
-}
-
+/* Post Individual - Depoimento (já usamos blockquote do tema) */
 .testimonial {
-    background: #f0f8ff;
-    border-left: 4px solid #007bff;
-    padding: 2rem;
-    margin: 2rem 0;
-    font-style: italic;
+  /* Removido - usando blockquote padrão do tema */
 }
 
-.testimonial cite {
-    display: block;
-    margin-top: 1rem;
-    font-style: normal;
-    text-align: right;
-}
-
+/* Post Individual - CTA (já definimos no HTML) */
 .cta-bottom {
-    background: #007bff;
-    color: white;
-    padding: 3rem;
-    text-align: center;
-    margin-top: 3rem;
-    border-radius: 8px;
+  /* Removido - usando section com classes do tema */
 }
 
 .cta-button {
-    display: inline-block;
-    background: white;
-    color: #007bff;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 1rem;
+  /* Removido - usando btn do tema */
 }
 
-.cta-button:hover {
-    background: #f8f9fa;
+/* Navegação entre posts */
+.post-navigation {
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Ajustes específicos para o blog */
+.post-category.text-line {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.post-category.text-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .blog-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .stat-box h3 {
+    font-size: 2rem;
+  }
+  
+  .category-pills {
+    gap: 0.5rem;
+  }
+  
+  .category-pill {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-card {
+    padding: 1.5rem;
+  }
+  
+  .blog-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-box h3 {
+    font-size: 1.75rem;
+  }
+  
+  .article-content {
+    font-size: 1rem;
+  }
+  
+  .article-content .lead {
+    font-size: 1.1rem;
+  }
+}
+
+/* Utilitários extras */
+.text-yellow {
+  color: #ffd700 !important;
+}
+
+.bg-yellow {
+  background-color: #ffd700 !important;
+}
+
+.btn-yellow {
+  background-color: #ffd700 !important;
+  border-color: #ffd700 !important;
+  color: #333 !important;
+}
+
+.btn-yellow:hover {
+  background-color: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+  color: #333 !important;
 }
