@@ -51,6 +51,22 @@
     }
   }
   </script>
+  
+  <style>
+    .text-yellow {
+      color: #ffd700 !important;
+    }
+    .btn-yellow {
+      background-color: #ffd700 !important;
+      border-color: #ffd700 !important;
+      color: #333 !important;
+    }
+    .btn-yellow:hover {
+      background-color: #ffcc00 !important;
+      border-color: #ffcc00 !important;
+      color: #333 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -179,76 +195,17 @@
       </div>
     </section>
 
-    <!-- CTA Section idêntica ao site -->
-    <section class="wrapper bg-dark mb-5" id="simulacao-blog">
-      <div class="container pt-16 pb-10 pb-md-5">
-        <div class="row">
-          <div class="col-lg-4 col-xl-5 col-xxl-4">
-            <h2 class="fs-16 text-uppercase text-line text-white mb-3">QUER RESULTADOS COMO A BIONEXO?</h2>
-          </div>
-
-          <div class="card bg-yellow">
-            <div class="card-body p-8">
-              <div class="row gx-md-8 gx-xl-12 gy-10">
-                <div class="col-lg-6">
-                  <h2 class="display-4 mb-3 pe-lg-10">VAMOS FAZER UMA SIMULAÇÃO DE PREÇO?</h2>
-                  <p class="lead pe-lg-12 mb-0 text-dark">Descubra quanto custa contratar com agilidade e suporte.</p>
-                </div>
-                <div class="col-lg-6">
-                  <form class="contact-form" method="post">
-                    <div class="messages"></div>
-                    <div class="controls">
-                      <div class="row gx-4">
-                        
-                        <div class="col-md-5">
-                          <div class="form-label-group mb-3">
-                            <input id="nome-blog" type="text" name="nome" class="form-control bg-soft-primary border-0" placeholder="Nome" required="required">
-                          </div>
-                        </div>
-                        
-                        <div class="col-md-5">
-                          <div class="form-label-group mb-3">
-                            <input id="tel-blog" type="text" name="tel" class="form-control bg-soft-primary border-0" placeholder="Whatsapp" required="required">
-                          </div>
-                        </div>
-                        
-                        <div class="col-md-10">
-                          <div class="form-label-group mb-3">
-                            <input id="profissional-blog" type="text" name="profissional" class="form-control bg-soft-primary border-0" placeholder="Qual cargo ou função você precisa contratar?" required="required">
-                          </div>
-                        </div>
-                        
-                        <div class="col-md-10">
-                          <div class="form-label-group mb-3">
-                            <input id="salario-blog" type="text" name="salario" class="form-control bg-soft-primary border-0" placeholder="Qual o salário mensal aproximado?" required="required">
-                          </div>  
-                        </div>
-                        
-                        <div class="col-md-10">
-                          <div class="form-label-group mb-3">
-                            <input id="email-blog" type="email" name="email" class="form-control bg-soft-primary border-0" placeholder="E-mail para receber a simulação" required="required">
-                          </div>
-                        </div>
-                        
-                        <div class="col-12 pt-4">
-                          <input type="button" id="btnSubmit-blog" class="btn btn-sm btn-dark rounded" value="FAZER SIMULAÇÃO">
-                        </div>
-                        
-                        <div class="col-12 pt-4">
-                          <p class="text-dark small mb-3" style="font-size: 0.9em; line-height: 1.6; max-width: 400px; text-align: left;">
-                            Este formulário é exclusivo para quem quer contratar.<br>
-                            Buscando recolocação? <a href="https://catena.notion.site/Recursos-para-Candidatos-1a957ddbde5a80f684dbd5d57c0e6913" target="_blank" class="text-dark text-decoration-underline" style="font-weight: normal;">Clique aqui.</a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+    <!-- CTA Section com amarelo correto -->
+    <section class="wrapper bg-dark">
+      <div class="container py-14 py-md-16">
+        <div class="row text-center">
+          <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto">
+            <h2 class="fs-16 text-uppercase text-white mb-3">QUER RESULTADOS COMO A BIONEXO?</h2>
+            <h3 class="display-6 text-white mb-7">Candidatos qualificados em até 72 horas para sua empresa</h3>
+            <a href="../../../#simulacao" class="btn btn-yellow rounded">Fazer Simulação</a>
           </div>
         </div>
-      </div>  
+      </div>
     </section>
 
   </div>
@@ -288,77 +245,7 @@
   </footer>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="../../../assets/js/jquery.maskMoney.min.js"></script>
   <script src="../../../assets/js/plugins.js"></script>
   <script src="../../../assets/js/theme.js"></script>
-
-  <style>
-    .text-yellow {
-      color: #ffd700 !important;
-    }
-  </style>
-
-  <script type="text/javascript">
-    // Script do formulário igual ao site principal
-    $(function() {
-      var referralid = "BLOG-BIONEXO";
-
-      if ($("#salario-blog").length) {
-        $("#salario-blog").maskMoney({
-          prefix: 'R$ ',
-          allowNegative: false,
-          thousands: '.',
-          decimal: ',',
-          affixesStay: false
-        });
-      }
-
-      // Máscara para telefone
-      $("#tel-blog").on('input', function() {
-        var value = $(this).val().replace(/\D/g, '');
-        var formattedValue = '';
-        
-        if (value.length > 0) {
-          formattedValue = '(' + value.substring(0, 2);
-        }
-        if (value.length >= 3) {
-          formattedValue += ') ' + value.substring(2, 7);
-        }
-        if (value.length >= 8) {
-          formattedValue += '-' + value.substring(7, 11);
-        }
-        
-        $(this).val(formattedValue);
-      });
-
-      $("#btnSubmit-blog").on("click", function(e) {
-        e.preventDefault();
-
-        let nome = $('#nome-blog').val().trim();
-        let email = $('#email-blog').val().trim();
-        let tel = $('#tel-blog').val().replace(/\D/g, '');
-        let profissional = $('#profissional-blog').val().trim();
-        let salario = $("#salario-blog").maskMoney('unmasked')[0] || 0;
-
-        if (!nome || !email || !tel || !profissional || !salario) {
-          alert("Favor preencher todas as informações do formulário.");
-          return false;
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-          alert("Favor preencher um e-mail válido.");
-          return false;
-        }
-
-        if (tel.length < 10 || tel.length > 11) {
-          alert("Favor preencher com um telefone válido, somente números incluindo o DDD.");
-          return false;
-        }
-
-        window.location.href = `../../../obrigado.html?nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&tel=${encodeURIComponent(tel)}&profissional=${encodeURIComponent(profissional)}&salario=${encodeURIComponent(salario)}&referralid=${encodeURIComponent(referralid)}`;
-      });
-    });
-  </script>
 </body>
 </html>
