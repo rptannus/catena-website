@@ -19,9 +19,6 @@
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/colors/aqua.css">
   <link rel="preload" href="../assets/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet';">
-  
-  <!-- CSS específico do Blog -->
-  <link rel="stylesheet" href="assets/css/blog.css">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L6X2BD2Z0"></script>
@@ -31,6 +28,25 @@
     gtag('js', new Date());
     gtag('config', 'G-1L6X2BD2Z0');
   </script>
+  
+  <style>
+    /* Classe para o amarelo da Catena */
+    .text-catena-yellow {
+      color: #ffd700 !important;
+    }
+    .bg-catena-yellow {
+      background-color: #ffd700 !important;
+    }
+    .btn-catena-yellow {
+      background-color: #ffd700 !important;
+      border-color: #ffd700 !important;
+      color: #333 !important;
+    }
+    .btn-catena-yellow:hover {
+      background-color: #ffcc00 !important;
+      border-color: #ffcc00 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -82,19 +98,19 @@
             <h1 class="display-4 text-white mb-4">Blog Catena</h1>
             <p class="lead text-white mb-8">Cases de sucesso, insights e guias sobre recrutamento</p>
             
-            <!-- Stats -->
-            <div class="blog-stats">
-              <div class="stat-box">
-                <h3>625+</h3>
-                <p>Vagas Fechadas</p>
+            <!-- Stats com fontes maiores e amarelo correto -->
+            <div class="row justify-content-center text-center">
+              <div class="col-md-4">
+                <h2 class="display-3 text-catena-yellow mb-2">625+</h2>
+                <p class="text-white fs-lg mb-0">Vagas Fechadas</p>
               </div>
-              <div class="stat-box">
-                <h3>250+</h3>
-                <p>Empresas Clientes</p>
+              <div class="col-md-4">
+                <h2 class="display-3 text-catena-yellow mb-2">250+</h2>
+                <p class="text-white fs-lg mb-0">Empresas Clientes</p>
               </div>
-              <div class="stat-box">
-                <h3>15 Dias</h3>
-                <p>Da busca à oferta</p>
+              <div class="col-md-4">
+                <h2 class="display-3 text-catena-yellow mb-2">15 Dias</h2>
+                <p class="text-white fs-lg mb-0">Da busca à oferta</p>
               </div>
             </div>
           </div>
@@ -106,96 +122,180 @@
     <section class="wrapper bg-light">
       <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
         
-        <!-- Categorias -->
-        <div class="category-pills">
-          <a href="#" class="category-pill active">Todos</a>
-          <a href="#" class="category-pill">Cases de Sucesso</a>
-          <a href="#" class="category-pill">Tecnologia</a>
-          <a href="#" class="category-pill">Vendas</a>
-          <a href="#" class="category-pill">Marketing</a>
-          <a href="#" class="category-pill">FAQ</a>
+        <!-- Categorias com botões brancos -->
+        <div class="row mb-8">
+          <div class="col-12 text-center">
+            <div class="d-flex justify-content-center flex-wrap gap-2" id="category-filters">
+              <button class="btn btn-sm btn-dark rounded-pill category-filter active" data-category="all">Todos</button>
+              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="cases">Cases de Sucesso</button>
+              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="tecnologia">Tecnologia</button>
+              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="vendas">Vendas</button>
+              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="marketing">Marketing</button>
+              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="faq">FAQ</button>
+            </div>
+          </div>
         </div>
 
-        <!-- Grid de Posts -->
-        <div class="row gx-lg-8 gx-xl-12 gy-10">
+        <!-- Grid de Posts com mais espaçamento -->
+        <div class="row gx-lg-8 gx-xl-12 gy-10" id="posts-grid">
           
           <!-- FAQ: Como encontrar candidatos -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">PERGUNTAS FREQUENTES</div>
-              <h3><a href="faq/como-catena-encontra-candidatos-72-horas.html">Como a Catena encontra candidatos em 72 horas?</a></h3>
-              <p>Descubra como usamos Growth Hacking e IA para entregar candidatos qualificados em tempo recorde.</p>
-              <a href="faq/como-catena-encontra-candidatos-72-horas.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="faq">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">PERGUNTAS FREQUENTES</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="faq/como-catena-encontra-candidatos-72-horas.html" class="link-dark">
+                    Como a Catena encontra candidatos em 72 horas?
+                  </a>
+                </h2>
+                <p class="mb-0">Descubra como usamos Growth Hacking e IA para entregar candidatos qualificados em tempo recorde.</p>
+              </div>
+              <div class="card-footer">
+                <a href="faq/como-catena-encontra-candidatos-72-horas.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
           
           <!-- Case 1: Bionexo -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • TECNOLOGIA</div>
-              <h3><a href="cases/bionexo.html">Como a Bionexo encontrou talentos de tecnologia com a Catena</a></h3>
-              <p>Empresa multinacional de saúde conseguiu contratar vários candidatos qualificados para suas equipes de tecnologia.</p>
-              <a href="cases/bionexo.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases tecnologia">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • TECNOLOGIA</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/bionexo.html" class="link-dark">
+                    Como a Bionexo encontrou talentos de tecnologia com a Catena
+                  </a>
+                </h2>
+                <p class="mb-0">Empresa multinacional de saúde conseguiu contratar vários candidatos qualificados para suas equipes de tecnologia.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/bionexo.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
           <!-- Case 2: TNS Nano -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • VENDAS</div>
-              <h3><a href="cases/tns-nano.html">De 8 meses para 1: TNS Nano encontra diretor de vendas</a></h3>
-              <p>Após 8 meses sem sucesso, a TNS Nano preencheu a vaga de Diretor Comercial em apenas 30 dias.</p>
-              <a href="cases/tns-nano.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases vendas">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • VENDAS</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/tns-nano.html" class="link-dark">
+                    De 8 meses para 1: TNS Nano encontra diretor de vendas
+                  </a>
+                </h2>
+                <p class="mb-0">Após 8 meses sem sucesso, a TNS Nano preencheu a vaga de Diretor Comercial em apenas 30 dias.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/tns-nano.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
           <!-- Case 3: Winnin -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • MARKETING</div>
-              <h3><a href="cases/winnin.html">Winnin melhora qualificação de candidatos com a Catena</a></h3>
-              <p>Como uma empresa de IA otimizou seu processo para encontrar Key Account Managers qualificados.</p>
-              <a href="cases/winnin.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases marketing">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • MARKETING</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/winnin.html" class="link-dark">
+                    Winnin melhora qualificação de candidatos com a Catena
+                  </a>
+                </h2>
+                <p class="mb-0">Como uma empresa de IA otimizou seu processo para encontrar Key Account Managers qualificados.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/winnin.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
           <!-- Case 4: JL Capacitores -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • INDÚSTRIA</div>
-              <h3><a href="cases/jl-capacitores.html">Recrutamento sob medida: JL Capacitores e a Catena</a></h3>
-              <p>Como encontramos um Técnico Mecânico especializado em apenas uma semana para posição nichada.</p>
-              <a href="cases/jl-capacitores.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • INDÚSTRIA</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/jl-capacitores.html" class="link-dark">
+                    Recrutamento sob medida: JL Capacitores e a Catena
+                  </a>
+                </h2>
+                <p class="mb-0">Como encontramos um Técnico Mecânico especializado em apenas uma semana para posição nichada.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/jl-capacitores.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
           <!-- Case 5: Houer -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • TECNOLOGIA</div>
-              <h3><a href="cases/houer.html">Houer contrata múltiplos talentos tech com a Catena</a></h3>
-              <p>Como contrataram Analistas de Dados, Engenheiros de Dados e Web Developers em menos de duas semanas.</p>
-              <a href="cases/houer.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases tecnologia">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • TECNOLOGIA</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/houer.html" class="link-dark">
+                    Houer contrata múltiplos talentos tech com a Catena
+                  </a>
+                </h2>
+                <p class="mb-0">Como contrataram Analistas de Dados, Engenheiros de Dados e Web Developers em menos de duas semanas.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/houer.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
           <!-- Case 6: Sicoob -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • FINANCEIRO</div>
-              <h3><a href="cases/sicoob.html">Sicoob recruta no interior com sucesso</a></h3>
-              <p>Como uma das maiores cooperativas do Brasil contratou um Gerente de Relacionamento em Sumaré.</p>
-              <a href="cases/sicoob.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • FINANCEIRO</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/sicoob.html" class="link-dark">
+                    Sicoob recruta no interior com sucesso
+                  </a>
+                </h2>
+                <p class="mb-0">Como uma das maiores cooperativas do Brasil contratou um Gerente de Relacionamento em Sumaré.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/sicoob.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
           <!-- Case 7: Exati -->
-          <div class="col-md-6 col-lg-4">
-            <div class="blog-card">
-              <div class="blog-card-category">CASE DE SUCESSO • SAAS</div>
-              <h3><a href="cases/exati.html">Exati acelera contratações de SDRs</a></h3>
-              <p>Após 1,5 mês sem candidatos, a Exati contratou 2 SDRs em apenas 15 dias com a Catena.</p>
-              <a href="cases/exati.html" class="link-body">Ler mais →</a>
+          <div class="col-md-6 col-lg-4 post-item" data-categories="cases tecnologia">
+            <div class="card">
+              <div class="card-body p-5">
+                <div class="post-category text-line mb-3">
+                  <a href="#" class="hover text-catena-yellow" rel="category">CASE DE SUCESSO • SAAS</a>
+                </div>
+                <h2 class="post-title h3 mt-1 mb-3">
+                  <a href="cases/exati.html" class="link-dark">
+                    Exati acelera contratações de SDRs
+                  </a>
+                </h2>
+                <p class="mb-0">Após 1,5 mês sem candidatos, a Exati contratou 2 SDRs em apenas 15 dias com a Catena.</p>
+              </div>
+              <div class="card-footer">
+                <a href="cases/exati.html" class="link-body">Ler mais →</a>
+              </div>
             </div>
           </div>
 
@@ -204,7 +304,7 @@
     </section>
 
     <!-- CTA Section com fundo amarelo -->
-    <section class="wrapper" style="background-color: #ffd700 !important;">
+    <section class="wrapper bg-catena-yellow">
       <div class="container py-14 py-md-16">
         <div class="row text-center">
           <div class="col-lg-10 col-xl-8 col-xxl-7 mx-auto">
@@ -255,5 +355,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../assets/js/plugins.js"></script>
   <script src="../assets/js/theme.js"></script>
+  
+  <!-- JavaScript para filtros de categoria -->
+  <script>
+    $(document).ready(function() {
+      // Função para filtrar posts
+      $('.category-filter').on('click', function() {
+        // Remove active de todos os botões
+        $('.category-filter').removeClass('btn-dark').addClass('btn-white');
+        
+        // Adiciona active ao botão clicado
+        $(this).removeClass('btn-white').addClass('btn-dark');
+        
+        // Pega a categoria selecionada
+        var selectedCategory = $(this).data('category');
+        
+        // Mostra/esconde posts baseado na categoria
+        if (selectedCategory === 'all') {
+          $('.post-item').fadeIn();
+        } else {
+          $('.post-item').each(function() {
+            var postCategories = $(this).data('categories').split(' ');
+            if (postCategories.includes(selectedCategory)) {
+              $(this).fadeIn();
+            } else {
+              $(this).fadeOut();
+            }
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
