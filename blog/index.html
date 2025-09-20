@@ -45,6 +45,7 @@
     .btn-catena-yellow:hover {
       background-color: #ffcc00 !important;
       border-color: #ffcc00 !important;
+      color: #333 !important;
     }
   </style>
 </head>
@@ -122,16 +123,16 @@
     <section class="wrapper bg-light">
       <div class="container pt-15 pt-md-17 pb-13 pb-md-15">
         
-        <!-- Categorias com botões brancos -->
+        <!-- Categorias com botões -->
         <div class="row mb-8">
           <div class="col-12 text-center">
             <div class="d-flex justify-content-center flex-wrap gap-2" id="category-filters">
-              <button class="btn btn-sm btn-dark rounded-pill category-filter active" data-category="all">Todos</button>
-              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="cases">Cases de Sucesso</button>
-              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="tecnologia">Tecnologia</button>
-              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="vendas">Vendas</button>
-              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="marketing">Marketing</button>
-              <button class="btn btn-sm btn-white rounded-pill category-filter" data-category="faq">FAQ</button>
+              <button class="btn btn-sm btn-catena-yellow rounded-pill category-filter active" data-category="all">Todos</button>
+              <button class="btn btn-sm btn-dark rounded-pill category-filter" data-category="cases">Cases de Sucesso</button>
+              <button class="btn btn-sm btn-dark rounded-pill category-filter" data-category="tecnologia">Tecnologia</button>
+              <button class="btn btn-sm btn-dark rounded-pill category-filter" data-category="vendas">Vendas</button>
+              <button class="btn btn-sm btn-dark rounded-pill category-filter" data-category="marketing">Marketing</button>
+              <button class="btn btn-sm btn-dark rounded-pill category-filter" data-category="faq">FAQ</button>
             </div>
           </div>
         </div>
@@ -361,11 +362,11 @@
     $(document).ready(function() {
       // Função para filtrar posts
       $('.category-filter').on('click', function() {
-        // Remove active de todos os botões
-        $('.category-filter').removeClass('btn-dark').addClass('btn-white');
+        // Remove active de todos os botões - volta para preto
+        $('.category-filter').removeClass('btn-catena-yellow active').addClass('btn-dark');
         
-        // Adiciona active ao botão clicado
-        $(this).removeClass('btn-white').addClass('btn-dark');
+        // Adiciona active ao botão clicado - fica amarelo
+        $(this).removeClass('btn-dark').addClass('btn-catena-yellow active');
         
         // Pega a categoria selecionada
         var selectedCategory = $(this).data('category');
