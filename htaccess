@@ -27,6 +27,15 @@ RewriteRule ^conteudo$ /conteudo/ [R=301,L]
 # NOVO: Redireciona /en sem barra para /en/ com barra
 RewriteRule ^en$ /en/ [R=301,L]
 
+# Redirecionamentos para páginas antigas (404s)
+# Posts antigos do blog redirecionam para home
+RedirectMatch 301 ^/conteudo/tecnologia/(.*)$ https://catena.work/
+RedirectMatch 301 ^/conteudo/operacoes/(.*)$ https://catena.work/
+
+# Páginas antigas em inglês redirecionam para /en/ (quando criarmos)
+Redirect 301 /en/search https://catena.work/en/
+Redirect 301 /index-en.html https://catena.work/en/
+
 # HSTS: força os navegadores a usarem HTTPS
 <IfModule mod_headers.c>
   Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
