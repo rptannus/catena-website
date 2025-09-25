@@ -4,7 +4,7 @@
   <!-- Página principal -->
   <url>
     <loc>https://catena.work/</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-01-25</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -12,8 +12,16 @@
   <!-- Versão em inglês -->
   <url>
     <loc>https://catena.work/en/</loc>
-    <lastmod>2025-01-21</lastmod>
+    <lastmod>2025-01-25</lastmod>
     <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://catena.work/blog/</loc>
+    <lastmod>2025-01-25</lastmod>
+    <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
 
