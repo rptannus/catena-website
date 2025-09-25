@@ -1,12 +1,17 @@
 {
   "redirects": [
     {
-      "source": "/conteudo/tecnologia/(.*)",
-      "destination": "/",
+      "source": "/index-en.html",
+      "destination": "/en/",
       "permanent": true
     },
     {
-      "source": "/conteudo/operacoes/(.*)",
+      "source": "/en/index.html",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
       "destination": "/",
       "permanent": true
     },
@@ -16,8 +21,13 @@
       "permanent": true
     },
     {
-      "source": "/index-en.html",
-      "destination": "/en/",
+      "source": "/conteudo/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/conteudo",
+      "destination": "/",
       "permanent": true
     }
   ],
@@ -36,6 +46,10 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
         }
       ]
     }
