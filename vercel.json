@@ -24,6 +24,21 @@
       "source": "/conteudo/:path*",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/app.catena.work/:path*",
+      "destination": "/",
+      "permanent": true
     }
   ],
   "headers": [
@@ -41,6 +56,15 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/conteudo/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
         }
       ]
     }

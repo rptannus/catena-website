@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Bloquear TODO o diretório /conteudo/ - IMPORTANTE!
+Disallow: /conteudo/
+
 # Bloquear parâmetros de rastreamento (manter como está - correto)
 Disallow: /*?trk=
 Disallow: /*?utm_
@@ -13,11 +16,13 @@ Disallow: /tmp/
 Disallow: /ssl/
 Disallow: /logs/
 
-# Bloquear partes do WordPress (já redirecionadas)
+# Bloquear partes do WordPress (redundante mas mantém por segurança)
 Disallow: /conteudo/feed/
 Disallow: /conteudo/wp-admin/
 Disallow: /conteudo/wp-includes/
 Disallow: /conteudo/wp-json/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
 
 # Permitir páginas importantes
 Allow: /en/
