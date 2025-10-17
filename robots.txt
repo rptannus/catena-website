@@ -4,6 +4,10 @@ Allow: /
 # Bloquear TODO o diretório /conteudo/ - IMPORTANTE!
 Disallow: /conteudo/
 
+# Bloquear páginas de agradecimento (thank-you pages)
+Disallow: /obrigado.html
+Disallow: /en/thank-you.html
+
 # Bloquear parâmetros de rastreamento (manter como está - correto)
 Disallow: /*?trk=
 Disallow: /*?utm_
